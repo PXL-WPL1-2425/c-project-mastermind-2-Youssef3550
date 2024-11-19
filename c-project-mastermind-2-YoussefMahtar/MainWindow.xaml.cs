@@ -227,6 +227,12 @@ namespace c_project_mastermind_2_YoussefMahtar
         private void Attempts()
         {
             this.Title = $"Mastermind Attempt: {attempts}";
+
+            if (attempts > 10)
+            {
+                MessageBox.Show("Je 10 poginingen wijn op!", "Verloren");
+                this.Close();
+            }
         }
 
         private void stopCountdown()
