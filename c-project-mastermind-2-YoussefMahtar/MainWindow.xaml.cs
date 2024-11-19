@@ -26,13 +26,15 @@ namespace c_project_mastermind_2_YoussefMahtar
         int attempts = 1;
         string codeString = "";
         int sec = 0;
+        int score = 100;
         public MainWindow()
         {
             InitializeComponent();
             RandomKleuren();
             LabelBorder();
-            toggleDebug();
+            TextBoxCode();
             Attempts();
+            showScore();
 
             timer.Interval = new TimeSpan(0, 0, 0, 1);
             timer.Tick += startCountdown;
@@ -68,10 +70,12 @@ namespace c_project_mastermind_2_YoussefMahtar
             else if (checkKleur1 == code[1] || checkKleur1 == code[2] || checkKleur1 == code[3])
             {
                 Label1.BorderBrush = Brushes.Wheat;
+                score = score - 1;
             }
             else
             {
                 Label1.BorderBrush = Brushes.Transparent;
+                score = score - 2;
             }
             if (checkKleur2 == code[1])
             {
@@ -81,10 +85,12 @@ namespace c_project_mastermind_2_YoussefMahtar
             else if (checkKleur2 == code[0] || checkKleur2 == code[2] || checkKleur2 == code[3])
             {
                 Label2.BorderBrush = Brushes.Wheat;
+                score = score - 1;
             }
             else
             {
                 Label2.BorderBrush = Brushes.Transparent;
+                score = score - 2;
             }
             if (checkKleur3 == code[2])
             {
@@ -94,10 +100,12 @@ namespace c_project_mastermind_2_YoussefMahtar
             else if (checkKleur3 == code[0] || checkKleur3 == code[1] || checkKleur3 == code[3])
             {
                 Label3.BorderBrush = Brushes.Wheat;
+                score = score - 1;
             }
             else
             {
                 Label3.BorderBrush = Brushes.Transparent;
+                score = score - 2;
             }
             if (checkKleur4 == code[3])
             {
@@ -107,11 +115,15 @@ namespace c_project_mastermind_2_YoussefMahtar
             else if (checkKleur4 == code[0] || checkKleur4 == code[1] || checkKleur4 == code[2])
             {
                 Label4.BorderBrush = Brushes.Wheat;
+                score = score - 1;
             }
             else
             {
                 Label4.BorderBrush = Brushes.Transparent;
+                score = score - 2;
             }
+
+            showScore();
 
             if (Label1.BorderBrush == Brushes.DarkRed && Label2.BorderBrush == Brushes.DarkRed &&
                 Label3.BorderBrush == Brushes.DarkRed && Label4.BorderBrush == Brushes.DarkRed)
@@ -119,6 +131,7 @@ namespace c_project_mastermind_2_YoussefMahtar
                 MessageBox.Show("JE HEBT ALLE KLEUREN JUIST GERADEN!", "Gewonnen!", MessageBoxButton.OK, MessageBoxImage.Information);
 
             }
+
         }
 
         private void RandomKleuren()
@@ -219,7 +232,7 @@ namespace c_project_mastermind_2_YoussefMahtar
             }
         }
 
-        private void toggleDebug()
+        private void TextBoxCode()
         {
             textBoxCode.Text = $"{codeString}";
         }
@@ -230,7 +243,7 @@ namespace c_project_mastermind_2_YoussefMahtar
 
             if (attempts > 10)
             {
-                MessageBox.Show("Je 10 poginingen wijn op!", "Verloren");
+                MessageBox.Show("Je 10 poginingen zijn op!", "Verloren");
                 this.Close();
             }
         }
@@ -244,6 +257,10 @@ namespace c_project_mastermind_2_YoussefMahtar
                 attempts++;
                 Attempts();
             }
+        }
+        private void showScore()
+        {
+            scoreTextBox.Text = "Score: " + score.ToString();
         }
 
     }
