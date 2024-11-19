@@ -128,8 +128,20 @@ namespace c_project_mastermind_2_YoussefMahtar
             if (Label1.BorderBrush == Brushes.DarkRed && Label2.BorderBrush == Brushes.DarkRed &&
                 Label3.BorderBrush == Brushes.DarkRed && Label4.BorderBrush == Brushes.DarkRed)
             {
-                MessageBox.Show("JE HEBT ALLE KLEUREN JUIST GERADEN!", "Gewonnen!", MessageBoxButton.OK, MessageBoxImage.Information);
+                var result = MessageBox.Show
+                    ($"code gekraakt in {attempts} pogingen! Wil je nog eens?"
+                    , "WINNER!"
+                    , MessageBoxButton.YesNo
+                    , MessageBoxImage.Information);
 
+                if (result == MessageBoxResult.Yes)
+                {
+                    nieuwSpel();
+                }
+                else if (result == MessageBoxResult.No)
+                {
+                    this.Close();
+                }
             }
 
         }
@@ -243,8 +255,19 @@ namespace c_project_mastermind_2_YoussefMahtar
 
             if (attempts > 10)
             {
-                MessageBox.Show("Je 10 poginingen zijn op!", "Verloren");
-                this.Close();
+                var result =MessageBox.Show($"You failed! De correcte code was {codeString}." +
+                    $"Nog eens proberen?", "FAILED"
+                    , MessageBoxButton.YesNo
+                    , MessageBoxImage.Question);
+                
+                if (result == MessageBoxResult.Yes)
+                {
+                    nieuwSpel();
+                }
+                else
+                {
+                    this.Close();
+                }
             }
         }
 
@@ -262,6 +285,37 @@ namespace c_project_mastermind_2_YoussefMahtar
         {
             scoreTextBox.Text = "Score: " + score.ToString();
         }
+
+        private void nieuwSpel()
+        {
+            sec = 0;
+            attempts = 1;
+            score = 100;
+
+            ComboBox1.Items.Clear();
+            ComboBox2.Items.Clear();
+            ComboBox3.Items.Clear();
+            ComboBox4.Items.Clear();
+            RandomKleuren();
+            updateLabels();
+            TextBoxCode();
+            Attempts();
+        }
+        private void updateLabels()
+        {
+            Label1.BorderBrush = Brushes.Transparent;
+            Label1.Background = Brushes.Transparent;
+
+            Label2.BorderBrush = Brushes.Transparent;
+            Label2.Background = Brushes.Transparent;
+
+            Label3.BorderBrush = Brushes.Transparent;
+            Label3.Background = Brushes.Transparent;
+
+            Label4.BorderBrush = Brushes.Transparent;
+            Label4.Background = Brushes.Transparent;
+        }
+
 
     }
 }

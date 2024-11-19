@@ -17,8 +17,8 @@
         <Label x:Name="Label3" Content="" HorizontalAlignment="Left" Height="90" Margin="511,98,0,0" VerticalAlignment="Top" Width="186"/>
         <Label x:Name="Label4" Content="" HorizontalAlignment="Left" Height="90" Margin="511,262,0,0" VerticalAlignment="Top" Width="186"/>
         <TextBox x:Name="textBoxCode" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="307,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203" IsEnabled="False"/>
-        <TextBox x:Name="tijdTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="566,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91"/>
-        <TextBox x:Name="scoreTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="110,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="tijdTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="566,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91" IsEnabled="False"/>
+        <TextBox x:Name="scoreTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="110,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" IsEnabled="False"/>
 
 
     </Grid>
