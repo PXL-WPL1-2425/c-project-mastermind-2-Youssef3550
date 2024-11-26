@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:c_project_mastermind_2_YoussefMahtar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"        KeyDown="textBoxCode_KeyDown">
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing" KeyDown="textBoxCode_KeyDown">
     <Grid Background="LightGray">
         <ComboBox x:Name="ComboBox1" HorizontalAlignment="Left" Height="25" Margin="94,68,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="ComboBox_SelectionChanged"/>
         <ComboBox x:Name="ComboBox2" HorizontalAlignment="Left" Height="25" Margin="94,232,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="ComboBox_SelectionChanged"/>
@@ -19,6 +19,7 @@
         <TextBox x:Name="textBoxCode" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="307,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203" IsEnabled="False"/>
         <TextBox x:Name="tijdTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="566,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91" IsEnabled="False"/>
         <TextBox x:Name="scoreTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="110,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" IsEnabled="False"/>
+        <ListBox x:Name="lst1" HorizontalAlignment="Left" Height="149" Margin="285,68,0,0" VerticalAlignment="Top" Width="56" Background="LightGray"/>
 
 
     </Grid>

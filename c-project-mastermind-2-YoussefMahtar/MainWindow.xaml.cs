@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -65,17 +66,21 @@ namespace c_project_mastermind_2_YoussefMahtar
             if (checkKleur1 == code[0])
             {
                 Label1.BorderBrush = Brushes.DarkRed;
+                lst1.Items.Add(checkKleur1);
+                
 
             }
             else if (checkKleur1 == code[1] || checkKleur1 == code[2] || checkKleur1 == code[3])
             {
                 Label1.BorderBrush = Brushes.Wheat;
                 score = score - 1;
+                lst1.Items.Add(checkKleur1);
             }
             else
             {
                 Label1.BorderBrush = Brushes.Transparent;
                 score = score - 2;
+                lst1.Items.Add(checkKleur1);
             }
             if (checkKleur2 == code[1])
             {
@@ -316,6 +321,15 @@ namespace c_project_mastermind_2_YoussefMahtar
             Label4.Background = Brushes.Transparent;
         }
 
-
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Wilt u het spel vroegtijdig beëindigen?", $"Poging {attempts}/10", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+            
+           
+        }
     }
 }
