@@ -53,80 +53,191 @@ namespace c_project_mastermind_2_YoussefMahtar
         {
             attempts++;
             Attempts();
-
             sec = 0;
-
 
             string checkKleur1 = ComboBox1.SelectedItem?.ToString() ?? "";
             string checkKleur2 = ComboBox2.SelectedItem?.ToString() ?? "";
             string checkKleur3 = ComboBox3.SelectedItem?.ToString() ?? "";
             string checkKleur4 = ComboBox4.SelectedItem?.ToString() ?? "";
 
+            string kleurCode1 = GekozenKleuren(ComboBox1);
+            SolidColorBrush colorBrush1 = (SolidColorBrush)new BrushConverter().ConvertFromString(kleurCode1);
+
+            string kleurCode2 = GekozenKleuren(ComboBox2);
+            SolidColorBrush colorBrush2 = (SolidColorBrush)new BrushConverter().ConvertFromString(kleurCode2);
+
+            string kleurCode3 = GekozenKleuren(ComboBox3);
+            SolidColorBrush colorBrush3 = (SolidColorBrush)new BrushConverter().ConvertFromString(kleurCode3);
+
+            string kleurCode4 = GekozenKleuren(ComboBox4);
+            SolidColorBrush colorBrush4 = (SolidColorBrush)new BrushConverter().ConvertFromString(kleurCode4);
 
             if (checkKleur1 == code[0])
             {
                 Label1.BorderBrush = Brushes.DarkRed;
-                
-                
-                
-
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush1,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.DarkRed
+                };
+                WrapPanel1.Children.Add(pogingCheck);
             }
             else if (checkKleur1 == code[1] || checkKleur1 == code[2] || checkKleur1 == code[3])
             {
                 Label1.BorderBrush = Brushes.Wheat;
-                score = score - 1;
-                
+                score -= 1;
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush1,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.White
+                };
+                WrapPanel1.Children.Add(pogingCheck);
             }
             else
             {
                 Label1.BorderBrush = Brushes.Transparent;
-                score = score - 2;
-                
+                score -= 2;
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush1,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.White
+                };
+                WrapPanel1.Children.Add(pogingCheck);
             }
+
             if (checkKleur2 == code[1])
             {
                 Label2.BorderBrush = Brushes.DarkRed;
-
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush2,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.DarkRed
+                };
+                WrapPanel2.Children.Add(pogingCheck);
             }
             else if (checkKleur2 == code[0] || checkKleur2 == code[2] || checkKleur2 == code[3])
             {
                 Label2.BorderBrush = Brushes.Wheat;
-                score = score - 1;
+                score -= 1;
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush2,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.White
+                };
+                WrapPanel2.Children.Add(pogingCheck);
             }
             else
             {
                 Label2.BorderBrush = Brushes.Transparent;
-                score = score - 2;
+                score -= 2;
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush2,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.White
+                };
+                WrapPanel2.Children.Add(pogingCheck);
             }
+
             if (checkKleur3 == code[2])
             {
                 Label3.BorderBrush = Brushes.DarkRed;
-
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush3,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.DarkRed
+                };
+                WrapPanel3.Children.Add(pogingCheck);
             }
             else if (checkKleur3 == code[0] || checkKleur3 == code[1] || checkKleur3 == code[3])
             {
                 Label3.BorderBrush = Brushes.Wheat;
-                score = score - 1;
+                score -= 1;
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush3,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.White
+                };
+                WrapPanel3.Children.Add(pogingCheck);
             }
             else
             {
                 Label3.BorderBrush = Brushes.Transparent;
-                score = score - 2;
+                score -= 2;
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush3,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.White
+                };
+                WrapPanel3.Children.Add(pogingCheck);
             }
+
             if (checkKleur4 == code[3])
             {
                 Label4.BorderBrush = Brushes.DarkRed;
-
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush4,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.DarkRed
+                };
+                WrapPanel4.Children.Add(pogingCheck);
             }
             else if (checkKleur4 == code[0] || checkKleur4 == code[1] || checkKleur4 == code[2])
             {
                 Label4.BorderBrush = Brushes.Wheat;
-                score = score - 1;
+                score -= 1;
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush4,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.White
+                };
+                WrapPanel4.Children.Add(pogingCheck);
             }
             else
             {
                 Label4.BorderBrush = Brushes.Transparent;
-                score = score - 2;
+                score -= 2;
+                var pogingCheck = new Rectangle
+                {
+                    Fill = colorBrush4,
+                    Width = 50,
+                    Height = 20,
+                    StrokeThickness = 4,
+                    Stroke = Brushes.White
+                };
+                WrapPanel4.Children.Add(pogingCheck);
             }
 
             showScore();
@@ -135,10 +246,10 @@ namespace c_project_mastermind_2_YoussefMahtar
                 Label3.BorderBrush == Brushes.DarkRed && Label4.BorderBrush == Brushes.DarkRed)
             {
                 var result = MessageBox.Show
-                    ($"code gekraakt in {attempts} pogingen! Wil je nog eens?"
-                    , "WINNER!"
-                    , MessageBoxButton.YesNo
-                    , MessageBoxImage.Information);
+                    ($"Code gekraakt in {attempts} pogingen! Wil je nog eens?",
+                    "WINNER!",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Information);
 
                 if (result == MessageBoxResult.Yes)
                 {
@@ -149,8 +260,8 @@ namespace c_project_mastermind_2_YoussefMahtar
                     this.Close();
                 }
             }
-
         }
+
 
         private void RandomKleuren()
         {
@@ -327,7 +438,7 @@ namespace c_project_mastermind_2_YoussefMahtar
             MessageBoxResult result = MessageBox.Show("Wilt u het spel vroegtijdig beëindigen?", $"Poging {attempts}/10", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
             if (result == MessageBoxResult.No)
             {
-                this.Close();
+                e.Cancel = true;
             }
         }
     }
