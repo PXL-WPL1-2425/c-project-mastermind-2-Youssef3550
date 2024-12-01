@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:c_project_mastermind_2_YoussefMahtar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing" KeyDown="textBoxCode_KeyDown">
+        Title="MasterMind - Youssef Mahtar" Height="450" Width="800" Closing="Window_Closing" KeyDown="textBoxCode_KeyDown">
     <Grid Background="LightGray">
         <ComboBox x:Name="ComboBox1" HorizontalAlignment="Left" Height="25" Margin="94,68,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="ComboBox_SelectionChanged"/>
         <ComboBox x:Name="ComboBox2" HorizontalAlignment="Left" Height="25" Margin="94,232,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="ComboBox_SelectionChanged"/>
@@ -16,9 +16,9 @@
         <Label x:Name="Label2" Content="" HorizontalAlignment="Left" Height="90" Margin="94,262,0,0" VerticalAlignment="Top" Width="186"/>
         <Label x:Name="Label3" Content="" HorizontalAlignment="Left" Height="90" Margin="490,98,0,0" VerticalAlignment="Top" Width="186"/>
         <Label x:Name="Label4" Content="" HorizontalAlignment="Left" Height="90" Margin="490,262,0,0" VerticalAlignment="Top" Width="186"/>
-        <TextBox x:Name="textBoxCode" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="307,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203" IsEnabled="False"/>
-        <TextBox x:Name="tijdTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="566,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91" IsEnabled="False"/>
-        <TextBox x:Name="scoreTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="110,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" IsEnabled="False"/>
+        <TextBox x:Name="textBoxCode" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="307,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203" IsEnabled="False" BorderThickness="0"/>
+        <TextBox x:Name="tijdTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="566,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91" IsEnabled="False"  BorderThickness="0"/>
+        <TextBox x:Name="scoreTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="110,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" IsEnabled="False" BorderThickness="0"/>
         <WrapPanel x:Name="WrapPanel1" HorizontalAlignment="Left" Height="118" Margin="285,84,0,0" VerticalAlignment="Top" Width="110" Background="LightGray" Orientation="Vertical"/>
         <WrapPanel x:Name="WrapPanel2" HorizontalAlignment="Left" Height="118" Margin="285,248,0,0" VerticalAlignment="Top" Width="110" Background="LightGray" Orientation="Vertical"/>
         <WrapPanel x:Name="WrapPanel3" HorizontalAlignment="Left" Height="118" Margin="681,86,0,0" VerticalAlignment="Top" Width="110" Background="LightGray" Orientation="Vertical"/>
