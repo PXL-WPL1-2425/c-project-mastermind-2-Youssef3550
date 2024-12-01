@@ -9,17 +9,21 @@
     <Grid Background="LightGray">
         <ComboBox x:Name="ComboBox1" HorizontalAlignment="Left" Height="25" Margin="94,68,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="ComboBox_SelectionChanged"/>
         <ComboBox x:Name="ComboBox2" HorizontalAlignment="Left" Height="25" Margin="94,232,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="ComboBox_SelectionChanged"/>
-        <ComboBox x:Name="ComboBox3" HorizontalAlignment="Left" Height="25" Margin="511,68,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="ComboBox_SelectionChanged"/>
-        <ComboBox x:Name="ComboBox4" HorizontalAlignment="Left" Height="25" Margin="511,232,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox x:Name="ComboBox3" HorizontalAlignment="Left" Height="25" Margin="490,73,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox x:Name="ComboBox4" HorizontalAlignment="Left" Height="25" Margin="490,237,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="ComboBox_SelectionChanged"/>
         <Button Content="Check Code" HorizontalAlignment="Left" Height="33" Margin="307,372,0,0" VerticalAlignment="Top" Width="203" Click="Button_Click"/>
         <Label x:Name="Label1" Content="" HorizontalAlignment="Left" Height="90" Margin="94,98,0,0" VerticalAlignment="Top" Width="186"/>
         <Label x:Name="Label2" Content="" HorizontalAlignment="Left" Height="90" Margin="94,262,0,0" VerticalAlignment="Top" Width="186"/>
-        <Label x:Name="Label3" Content="" HorizontalAlignment="Left" Height="90" Margin="511,98,0,0" VerticalAlignment="Top" Width="186"/>
-        <Label x:Name="Label4" Content="" HorizontalAlignment="Left" Height="90" Margin="511,262,0,0" VerticalAlignment="Top" Width="186"/>
+        <Label x:Name="Label3" Content="" HorizontalAlignment="Left" Height="90" Margin="490,98,0,0" VerticalAlignment="Top" Width="186"/>
+        <Label x:Name="Label4" Content="" HorizontalAlignment="Left" Height="90" Margin="490,262,0,0" VerticalAlignment="Top" Width="186"/>
         <TextBox x:Name="textBoxCode" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="307,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203" IsEnabled="False"/>
         <TextBox x:Name="tijdTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="566,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91" IsEnabled="False"/>
         <TextBox x:Name="scoreTextBox" Background="LightGray" HorizontalAlignment="Left" Height="26" Margin="110,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" IsEnabled="False"/>
-        <ListBox x:Name="lst1" HorizontalAlignment="Left" Height="149" Margin="285,68,0,0" VerticalAlignment="Top" Width="56" Background="LightGray"/>
+        <ListBox x:Name="ListBox1" HorizontalAlignment="Left" Height="118" Margin="285,84,0,0" VerticalAlignment="Top" Width="110" Background="LightGray"/>
+        <ListBox x:Name="ListBox2" HorizontalAlignment="Left" Height="118" Margin="285,248,0,0" VerticalAlignment="Top" Width="110" Background="LightGray"/>
+        <ListBox x:Name="ListBox3" HorizontalAlignment="Left" Height="118" Margin="681,86,0,0" VerticalAlignment="Top" Width="110" Background="LightGray"/>
+        <ListBox x:Name="ListBox4" HorizontalAlignment="Left" Height="118" Margin="681,250,0,0" VerticalAlignment="Top" Width="110" Background="LightGray"/>
+
 
 
     </Grid>
